@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Título de seção do cardápio ("Entradas", "Pratos Principais") -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:accessibilityHeading="true"
+    android:paddingTop="28dp"
+    android:paddingBottom="14dp"
+    android:textAppearance="@style/TextAppearance.Courmet.SectionTitle"
+    tools:ignore="UnusedAttribute"
+    tools:text="Entradas" />

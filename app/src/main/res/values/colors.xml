@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta Courmet (extraída das telas do Figma) -->
+    <color name="background">#F8F6F1</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="ink">#1C1A17</color>
+    <color name="text_secondary">#4A4741</color>
+    <color name="text_muted">#8E8A83</color>
+    <color name="text_hint">#A9A49C</color>
+    <color name="border">#E7E3DB</color>
+    <color name="gold">#C4A07A</color>
+    <color name="gold_soft">#F3EADF</color>
+    <color name="error">#B3261E</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Detalhes do restaurante: foto de capa, informações e cardápio.
+     A foto fica ATRÁS da status bar (edge-to-edge), por isso a raiz não recebe padding no topo. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".RestaurantActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <!-- Capa: foto + degradê + botões redondos por cima -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/restaurant_hero_description"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_restaurant_hero" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:background="@drawable/bg_restaurant_hero_scrim" />
+
+                <!-- A margem do topo recebe a altura da status bar no código -->
+                <LinearLayout
+                    android:id="@+id/layoutHeroButtons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/buttonBack"
+                        style="@style/Widget.Courmet.Restaurant.CircleButton"
+                        android:contentDescription="@string/restaurant_back"
+                        android:src="@drawable/ic_restaurant_back" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:id="@+id/buttonFavorite"
+                        style="@style/Widget.Courmet.Restaurant.CircleButton"
+                        android:contentDescription="@string/restaurant_favorite_add"
+                        android:src="@drawable/ic_restaurant_heart" />
+
+                    <ImageButton
+                        android:id="@+id/buttonShare"
+                        style="@style/Widget.Courmet.Restaurant.CircleButton"
+                        android:layout_marginStart="12dp"
+                        android:contentDescription="@string/restaurant_share"
+                        android:src="@drawable/ic_restaurant_share" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Painel branco de informações -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_restaurant_info_divider"
+                android:orientation="vertical"
+                android:paddingStart="24dp"
+                android:paddingTop="24dp"
+                android:paddingEnd="24dp"
+                android:paddingBottom="22dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textRestaurantName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/restaurant_default_name"
+                        android:textAppearance="@style/TextAppearance.Courmet.Restaurant.Name" />
+
+                    <!-- Avaliação: lida pelo leitor de tela como um bloco só -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:contentDescription="@string/restaurant_rating_description"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:importantForAccessibility="no"
+                            android:src="@drawable/ic_restaurant_star" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:importantForAccessibility="no"
+                            android:text="@string/restaurant_rating"
+                            android:textAppearance="@style/TextAppearance.Courmet.Restaurant.Rating" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/restaurant_tags"
+                    android:textAppearance="@style/TextAppearance.Courmet.Body" />
+
+                <!-- Tempo de entrega e taxa -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="6dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/restaurant_delivery_time"
+                        android:textAppearance="@style/TextAppearance.Courmet.Restaurant.Meta"
+                        app:drawableStartCompat="@drawable/ic_restaurant_clock" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:drawablePadding="6dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/restaurant_delivery_free"
+                        android:textAppearance="@style/TextAppearance.Courmet.Restaurant.Meta"
+                        app:drawableStartCompat="@drawable/ic_restaurant_scooter" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Cardápio: títulos de seção e cartões de prato são inseridos pelo código -->
+            <LinearLayout
+                android:id="@+id/containerMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Barra fixa "Ver pedido": só aparece depois que algum prato é adicionado -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonViewOrder"
+        style="@style/Widget.Courmet.Button.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone"
+        tools:text="Ver pedido • 2 itens • R$ 110,00"
+        tools:visibility="visible" />
+
+</LinearLayout>

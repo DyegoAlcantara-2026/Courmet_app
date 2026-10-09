@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tela de cadastro/edição de usuário (UsuarioFormActivity) -->
+    <string name="usuario_form_titulo_criar">Criar conta</string>
+    <string name="usuario_form_subtitulo_criar">Preencha seus dados para começar</string>
+    <string name="usuario_form_titulo_editar">Editar usuário</string>
+    <string name="usuario_form_voltar">Voltar</string>
+
+    <string name="usuario_form_nome_label">Nome</string>
+    <string name="usuario_form_nome_hint">Seu nome completo</string>
+    <string name="usuario_form_email_label">E-mail</string>
+    <string name="usuario_form_email_hint">seu@email.com</string>
+    <string name="usuario_form_telefone_label">Telefone (opcional)</string>
+    <string name="usuario_form_telefone_hint">(00) 00000-0000</string>
+    <string name="usuario_form_senha_label">Senha</string>
+    <string name="usuario_form_senha_hint">Mínimo de 6 caracteres</string>
+    <string name="usuario_form_confirmar_label">Confirmar senha</string>
+    <string name="usuario_form_confirmar_hint">Repita a senha</string>
+    <string name="usuario_form_senha_ajuda_editar">Deixe em branco para manter a senha atual</string>
+
+    <string name="usuario_form_criar">Criar conta</string>
+    <string name="usuario_form_salvar">Salvar</string>
+    <string name="usuario_form_salvando">Salvando…</string>
+    <string name="usuario_form_excluir">Excluir usuário</string>
+    <string name="usuario_form_ja_tem_conta">Já tem uma conta?</string>
+    <string name="usuario_form_entrar">Entrar</string>
+
+    <string name="usuario_form_erro_nome">Informe o seu nome</string>
+    <string name="usuario_form_erro_email">Informe um e-mail válido</string>
+    <string name="usuario_form_erro_email_em_uso">Este e-mail já está cadastrado</string>
+    <string name="usuario_form_erro_senha">A senha deve ter pelo menos 6 caracteres</string>
+    <string name="usuario_form_erro_confirmar">As senhas não conferem</string>
+
+    <string name="usuario_form_dialogo_titulo">Excluir usuário?</string>
+    <string name="usuario_form_dialogo_mensagem">Esta ação não pode ser desfeita.</string>
+    <string name="usuario_form_dialogo_cancelar">Cancelar</string>
+    <string name="usuario_form_dialogo_confirmar">Excluir</string>
+
+    <string name="usuario_form_msg_criado">Conta criada! Faça login.</string>
+    <string name="usuario_form_msg_atualizado">Usuário atualizado</string>
+    <string name="usuario_form_msg_excluido">Usuário excluído</string>
+    <string name="usuario_form_msg_nao_encontrado">Usuário não encontrado</string>
+    <string name="usuario_form_msg_erro_salvar">Não foi possível salvar o usuário</string>
+    <string name="usuario_form_msg_erro_excluir">Não foi possível excluir o usuário</string>
+</resources>

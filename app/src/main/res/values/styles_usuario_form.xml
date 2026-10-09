@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Botão circular de voltar do cabeçalho -->
+    <style name="Widget.Courmet.UsuarioForm.BackButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="backgroundTint">@color/surface</item>
+        <item name="strokeColor">@color/border</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cornerRadius">20dp</item>
+        <item name="icon">@drawable/ic_usuario_form_back</item>
+        <item name="iconTint">@color/ink</item>
+        <item name="iconSize">18dp</item>
+        <item name="iconPadding">0dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="rippleColor">@color/gold_soft</item>
+    </style>
+
+    <!-- Botão "Excluir usuário": contornado, mesma altura do "Salvar", texto em vermelho -->
+    <style name="Widget.Courmet.UsuarioForm.Button.Delete" parent="Widget.Courmet.Button.Outlined">
+        <item name="android:minHeight">54dp</item>
+        <item name="android:textColor">@color/error</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/manrope_bold</item>
+        <item name="rippleColor">@color/gold_soft</item>
+    </style>
+</resources>

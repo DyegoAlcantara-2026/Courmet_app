@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="produto_list_title">Cardápio</string>
+    <string name="produto_list_subtitle">Gerencie comidas e bebidas</string>
+    <string name="produto_list_back">Voltar</string>
+    <string name="produto_list_filter_todos">Todos</string>
+    <string name="produto_list_filter_comidas">Comidas</string>
+    <string name="produto_list_filter_bebidas">Bebidas</string>
+    <string name="produto_list_badge_comida">Comida</string>
+    <string name="produto_list_badge_bebida">Bebida</string>
+    <string name="produto_list_empty">Nenhum item cadastrado</string>
+    <string name="produto_list_empty_hint">Toque em \"Novo item\" para adicionar o primeiro.</string>
+    <string name="produto_list_new">Novo item</string>
+</resources>

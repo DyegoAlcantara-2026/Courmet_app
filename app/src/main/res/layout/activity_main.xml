@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tela inicial (Home): cabeçalho + cartões que levam às outras telas do app. -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="32dp">
+
+        <!-- Cabeçalho: logo serifado à esquerda, saudação à direita -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/home_logo"
+                android:textAppearance="@style/TextAppearance.Courmet.Logo"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/textGreeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_greeting"
+                android:textAppearance="@style/TextAppearance.Courmet.Home.Greeting" />
+        </LinearLayout>
+
+        <!-- Endereço (apenas visual por enquanto) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:text="@string/home_address"
+            android:textAppearance="@style/TextAppearance.Courmet.Body"
+            app:drawableStartCompat="@drawable/ic_home_location" />
+
+        <!-- Seção "Para Você" -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/home_section_for_you"
+            android:textAppearance="@style/TextAppearance.Courmet.SectionTitle" />
+
+        <!--
+            O mesmo layout (item_home_card) é incluído várias vezes.
+            O android:id do <include> substitui o id da raiz do cartão,
+            e é por esse id que o MainActivity encontra cada cartão.
+        -->
+        <include
+            android:id="@+id/cardPromotions"
+            layout="@layout/item_home_card" />
+
+        <include
+            android:id="@+id/cardRestaurant"
+            layout="@layout/item_home_card" />
+
+        <include
+            android:id="@+id/cardOrder"
+            layout="@layout/item_home_card" />
+
+        <include
+            android:id="@+id/cardSupport"
+            layout="@layout/item_home_card" />
+
+        <!-- Seção "Administração": os dois exemplos de CRUD -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/home_section_admin"
+            android:textAppearance="@style/TextAppearance.Courmet.SectionTitle" />
+
+        <include
+            android:id="@+id/cardMenu"
+            layout="@layout/item_home_card" />
+
+        <include
+            android:id="@+id/cardUsers"
+            layout="@layout/item_home_card" />
+
+        <!-- Espaço flexível: empurra o botão "Sair" para o rodapé da tela -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:minHeight="24dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonLogout"
+            style="@style/Widget.Courmet.Button.Outlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/home_logout"
+            app:icon="@drawable/ic_home_logout" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

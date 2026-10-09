@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="promotions_title">Promoções</string>
+    <string name="promotions_filter">Filtrar promoções</string>
+    <string name="promotions_coming_soon">Em breve</string>
+    <string name="promotions_banner_title">Pratos Prontos em Promoção</string>
+    <string name="promotions_banner_subtitle">Sabores exclusivos com até 40% OFF</string>
+    <string name="promotions_empty">Nenhuma promoção nesta categoria.</string>
+
+    <!-- Chips de categoria (o texto do chip também é usado como filtro) -->
+    <string name="promotions_category_all">Todos</string>
+    <string name="promotions_category_pasta">Massas</string>
+    <string name="promotions_category_meat">Carnes</string>
+    <string name="promotions_category_japanese">Japonês</string>
+    <string name="promotions_category_seafood">Frutos do Mar</string>
+
+    <!-- %1$d = porcentagem de desconto -->
+    <string name="promotions_discount_badge">%1$d%% OFF</string>
+    <!-- %1$s = preço já formatado -->
+    <string name="promotions_old_price">de %1$s</string>
+    <string name="promotions_new_price">por %1$s</string>
+</resources>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Tela de Promoções. A tela inteira rola junto (título, banner, chips e lista),
+    por isso tudo fica dentro de uma NestedScrollView. Como a lista tem poucos itens,
+    a RecyclerView pode ficar com altura wrap_content sem problema de desempenho.
+-->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    tools:context=".PromotionsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="16dp"
+        android:paddingBottom="24dp">
+
+        <!-- Cabeçalho: título serifado + botão redondo de filtro -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/promotions_title"
+                android:textAppearance="@style/TextAppearance.Courmet.ScreenTitle" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonFilter"
+                style="@style/Widget.Courmet.Promotions.FilterButton"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:contentDescription="@string/promotions_filter" />
+        </LinearLayout>
+
+        <!-- Banner: foto escurecida no fundo e textos brancos por cima (o FrameLayout empilha as views) -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Courmet.Promotions.Banner"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="24dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:importantForAccessibility="no"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_promo_banner" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/promotions_banner_title"
+                        android:textAppearance="@style/TextAppearance.Courmet.Promotions.BannerTitle" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/promotions_banner_subtitle"
+                        android:textAppearance="@style/TextAppearance.Courmet.Promotions.BannerSubtitle" />
+                </LinearLayout>
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Chips de categoria, com rolagem horizontal.
+             singleSelection = só um marcado por vez;
+             selectionRequired = não deixa desmarcar o chip atual (sempre há um filtro ativo). -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:clipToPadding="false"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:scrollbars="none">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupCategories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:checkedChip="@id/chipAll"
+                app:chipSpacingHorizontal="10dp"
+                app:selectionRequired="true"
+                app:singleLine="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipAll"
+                    style="@style/Widget.Courmet.Chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/promotions_category_all" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipPasta"
+                    style="@style/Widget.Courmet.Chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/promotions_category_pasta" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipMeat"
+                    style="@style/Widget.Courmet.Chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/promotions_category_meat" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipJapanese"
+                    style="@style/Widget.Courmet.Chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/promotions_category_japanese" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipSeafood"
+                    style="@style/Widget.Courmet.Chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/promotions_category_seafood" />
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
+
+        <!-- Lista de promoções. nestedScrollingEnabled=false: quem rola é a NestedScrollView. -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerPromotions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:nestedScrollingEnabled="false"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_promotion" />
+
+        <!-- Aparece só quando o filtro não encontra nenhum prato -->
+        <TextView
+            android:id="@+id/textEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:text="@string/promotions_empty"
+            android:textAppearance="@style/TextAppearance.Courmet.Body"
+            android:visibility="gone" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,19 @@
+<!-- Sacola de compras (cartão "Meu pedido") -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="22dp"
+    android:height="22dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M5,8H19L18,20A1,1 0,0 1,17 21H7A1,1 0,0 1,6 20Z"
+        android:strokeWidth="1.8"
+        android:strokeColor="#C4A07A"
+        android:strokeLineJoin="round" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M9,10V6A3,3 0,0 1,15 6V10"
+        android:strokeWidth="1.8"
+        android:strokeColor="#C4A07A"
+        android:strokeLineCap="round" />
+</vector>

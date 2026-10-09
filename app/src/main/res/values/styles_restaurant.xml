@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nome do restaurante (serifado, um pouco maior que o ScreenTitle) -->
+    <style name="TextAppearance.Courmet.Restaurant.Name" parent="TextAppearance.Courmet.ScreenTitle">
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="TextAppearance.Courmet.Restaurant.Rating" parent="TextAppearance.Courmet.Label">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="TextAppearance.Courmet.Restaurant.Meta" parent="TextAppearance.Courmet.Body">
+        <item name="android:fontFamily">@font/manrope_medium</item>
+        <item name="fontFamily">@font/manrope_medium</item>
+        <item name="android:textColor">@color/ink</item>
+    </style>
+
+    <style name="TextAppearance.Courmet.Restaurant.DishName" parent="TextAppearance.Courmet.Label">
+        <item name="android:fontFamily">@font/manrope_bold</item>
+        <item name="fontFamily">@font/manrope_bold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="TextAppearance.Courmet.Restaurant.DishDescription" parent="TextAppearance.Courmet.Body">
+        <item name="android:textSize">12.5sp</item>
+    </style>
+
+    <style name="TextAppearance.Courmet.Restaurant.Price" parent="TextAppearance.Courmet.Label">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/gold</item>
+    </style>
+
+    <!-- Botões redondos brancos sobre a foto (voltar, favoritar, compartilhar) -->
+    <style name="Widget.Courmet.Restaurant.CircleButton" parent="">
+        <item name="android:layout_width">36dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:background">@drawable/bg_restaurant_circle</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:elevation">2dp</item>
+    </style>
+
+    <!-- Cantos arredondados da foto de cada prato (usado no ShapeableImageView) -->
+    <style name="ShapeAppearance.Courmet.Restaurant.DishPhoto" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+</resources>

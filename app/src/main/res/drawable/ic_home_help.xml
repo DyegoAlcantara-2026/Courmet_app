@@ -1,0 +1,22 @@
+<!-- Interrogação dentro de um círculo (cartão "Ajuda & Suporte") -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="22dp"
+    android:height="22dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M12,3A9,9 0,1 1,12 21A9,9 0,1 1,12 3Z"
+        android:strokeWidth="1.8"
+        android:strokeColor="#C4A07A" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M9.5,9.5A2.5,2.5 0,1 1,12 12V13.5"
+        android:strokeWidth="1.8"
+        android:strokeColor="#C4A07A"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:fillColor="#C4A07A"
+        android:pathData="M12,16.2A1.1,1.1 0,1 1,12 18.4A1.1,1.1 0,1 1,12 16.2Z" />
+</vector>

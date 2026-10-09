@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="order_title">Pedido</string>
+    <string name="order_back">Voltar</string>
+    <string name="order_restaurant_logo">Logo do restaurante</string>
+    <string name="order_restaurant_monogram">O</string>
+    <string name="order_restaurant_name">Omakase Sushi Bar</string>
+    <string name="order_restaurant_subtitle">Sua entrega premium agendada</string>
+
+    <string name="order_item_omakase">Omakase Premium (12 pçs)</string>
+    <string name="order_item_gyoza">Guioza de Wagyu (4 pçs)</string>
+    <string name="order_item_quantity">%1$dx</string>
+
+    <string name="order_payment_method">Forma de pagamento</string>
+    <string name="order_payment_card">Cartão de Crédito (• • • • %1$s)</string>
+    <string name="order_payment_change">Alterar</string>
+
+    <string name="order_subtotal">Subtotal</string>
+    <string name="order_delivery_fee">Taxa de entrega</string>
+    <string name="order_delivery_free">Grátis</string>
+    <string name="order_total">Total</string>
+
+    <string name="order_checkout">Finalizar Pedido • %1$s</string>
+    <string name="order_sent">Pedido enviado!</string>
+    <string name="order_coming_soon">Em breve</string>
+</resources>

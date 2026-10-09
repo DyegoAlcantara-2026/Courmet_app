@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="support_title">Ajuda &amp; Suporte</string>
+    <string name="support_back">Voltar</string>
+    <string name="support_search_hint">Como podemos ajudar?</string>
+    <string name="support_faq_title">Perguntas Frequentes</string>
+    <string name="support_contact_title">Fale Conosco</string>
+
+    <string-array name="support_faq_questions">
+        <item>Como acompanho meu pedido?</item>
+        <item>Qual a política de cancelamento?</item>
+        <item>Como altero meu endereço de entrega?</item>
+        <item>Formas de pagamento aceitas</item>
+        <item>Como solicitar reembolso?</item>
+    </string-array>
+
+    <string-array name="support_faq_answers">
+        <item>Você pode acompanhar o status em tempo real acessando a aba \'Pedidos\' no menu inferior. Lá você verá o progresso do preparo até a entrega pelo nosso entregador parceiro.</item>
+        <item>Você pode cancelar gratuitamente enquanto o restaurante ainda não confirmou o pedido. Depois que o preparo começa, o cancelamento depende da aprovação do restaurante e pode haver cobrança parcial.</item>
+        <item>Acesse \'Perfil\' &gt; \'Endereços\' para adicionar ou editar seus endereços. Em um pedido já realizado, a alteração só é possível antes de o restaurante confirmá-lo. Nesse caso, fale com a gente pelo chat.</item>
+        <item>Aceitamos cartões de crédito e débito (Visa, Mastercard, Elo e American Express), Pix e vale-refeição das principais bandeiras. Em restaurantes selecionados também é possível pagar em dinheiro na entrega.</item>
+        <item>Abra o pedido na aba \'Pedidos\', toque em \'Preciso de ajuda\' e descreva o problema. Após a análise, o reembolso é feito na mesma forma de pagamento em até 7 dias úteis.</item>
+    </string-array>
+
+    <string name="support_contact_chat_title">Chat ao Vivo</string>
+    <string name="support_contact_chat_subtitle">Disponível 24h</string>
+    <string name="support_contact_email_title">E-mail</string>
+    <string name="support_contact_email_address" translatable="false">suporte@courmet.com.br</string>
+    <string name="support_contact_phone_title">Telefone</string>
+    <string name="support_contact_phone_number" translatable="false">0800 123 4567</string>
+    <string name="support_contact_phone_dial" translatable="false">08001234567</string>
+
+    <string name="support_coming_soon">Em breve</string>
+    <string name="support_no_app">Nenhum aplicativo disponível para esta ação</string>
+</resources>

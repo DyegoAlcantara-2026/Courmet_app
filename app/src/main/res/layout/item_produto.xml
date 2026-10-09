@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout de UM item da lista. A RecyclerView infla este arquivo só algumas vezes
+    e depois reaproveita as mesmas views enquanto o usuário rola a tela.
+-->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.Courmet.ProdutoList.Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Linha de cima: nome à esquerda, preço à direita -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textNome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.Courmet.ProdutoList.Name"
+                tools:text="Omakase Premium (12 pçs)" />
+
+            <TextView
+                android:id="@+id/textPreco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Courmet.ProdutoList.Price"
+                tools:text="R$ 180,00" />
+        </LinearLayout>
+
+        <!-- Etiqueta da categoria ("Comida" / "Bebida") -->
+        <TextView
+            android:id="@+id/textCategoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_produto_list_badge"
+            android:paddingStart="10dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="3dp"
+            android:textAppearance="@style/TextAppearance.Courmet.ProdutoList.Badge"
+            tools:text="Comida" />
+
+        <!-- Descrição: no máximo 2 linhas, com "..." no final se passar disso -->
+        <TextView
+            android:id="@+id/textDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.Courmet.ProdutoList.Description"
+            tools:text="Seleção do Chef de sushis exóticos." />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Tela "Cardápio": cabeçalho + filtros + lista (RecyclerView) + botão flutuante.
+    O FrameLayout raiz (id "main") recebe o padding das barras do sistema (edge-to-edge),
+    então tudo dentro dele, inclusive o botão "Novo item", fica acima da barra de navegação.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".produtos.ProdutoListActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Cabeçalho: voltar + título serifado -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonBack"
+                style="@style/Widget.Courmet.ProdutoList.BackButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="@string/produto_list_back" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:text="@string/produto_list_title"
+                android:textAppearance="@style/TextAppearance.Courmet.ScreenTitle" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/produto_list_subtitle"
+            android:textAppearance="@style/TextAppearance.Courmet.Caption" />
+
+        <!--
+            Filtros. singleSelection = só um chip marcado por vez;
+            selectionRequired = sempre existe um marcado (não dá para desmarcar todos).
+        -->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupFiltro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            app:checkedChip="@id/chipTodos"
+            app:chipSpacingHorizontal="8dp"
+            app:selectionRequired="true"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTodos"
+                style="@style/Widget.Courmet.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/produto_list_filter_todos" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipComidas"
+                style="@style/Widget.Courmet.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/produto_list_filter_comidas" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipBebidas"
+                style="@style/Widget.Courmet.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/produto_list_filter_bebidas" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- Área da lista: a RecyclerView e o aviso de "lista vazia" ocupam o mesmo espaço -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <!--
+                paddingBottom grande + clipToPadding=false: o último cartão consegue
+                rolar para cima do botão flutuante, sem ficar escondido atrás dele.
+            -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerProdutos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingStart="24dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="24dp"
+                android:paddingBottom="96dp"
+                tools:listitem="@layout/item_produto" />
+
+            <LinearLayout
+                android:id="@+id/layoutVazio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingStart="32dp"
+                android:paddingEnd="32dp"
+                android:paddingBottom="64dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/produto_list_empty"
+                    android:textAppearance="@style/TextAppearance.Courmet.SectionTitle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:text="@string/produto_list_empty_hint"
+                    android:textAppearance="@style/TextAppearance.Courmet.Caption" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Botão flutuante "Novo item" no canto inferior direito -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabNovo"
+        style="@style/Widget.Courmet.ProdutoList.Fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="24dp"
+        android:text="@string/produto_list_new"
+        app:icon="@drawable/ic_produto_list_add" />
+</FrameLayout>

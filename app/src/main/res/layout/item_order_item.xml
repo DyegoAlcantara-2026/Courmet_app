@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/textQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:background="@drawable/bg_order_qty_badge"
+        android:gravity="center"
+        android:minWidth="33dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:textAppearance="@style/TextAppearance.Courmet.Order.Quantity"
+        tools:text="1x" />
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="12dp"
+        android:layout_weight="1"
+        android:textAppearance="@style/TextAppearance.Courmet.Order.ItemName"
+        tools:text="Omakase Premium (12 pçs)" />
+
+    <TextView
+        android:id="@+id/textPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Courmet.Order.ItemPrice"
+        tools:text="R$ 180,00" />
+
+</LinearLayout>

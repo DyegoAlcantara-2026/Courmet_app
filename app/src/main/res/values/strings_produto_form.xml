@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tela de cadastro/edição de produto (ProdutoFormActivity) -->
+    <string name="produto_form_titulo_novo">Novo item</string>
+    <string name="produto_form_titulo_editar">Editar item</string>
+    <string name="produto_form_voltar">Voltar</string>
+
+    <string name="produto_form_nome_label">Nome</string>
+    <string name="produto_form_nome_hint">Ex.: Risoto de Funghi</string>
+    <string name="produto_form_descricao_label">Descrição (opcional)</string>
+    <string name="produto_form_descricao_hint">Ingredientes, porção, observações…</string>
+    <string name="produto_form_categoria_label">Categoria</string>
+    <string name="produto_form_categoria_comida">Comida</string>
+    <string name="produto_form_categoria_bebida">Bebida</string>
+    <string name="produto_form_preco_label">Preço (R$)</string>
+    <string name="produto_form_preco_hint">0,00</string>
+
+    <string name="produto_form_salvar">Salvar</string>
+    <string name="produto_form_salvando">Salvando…</string>
+    <string name="produto_form_excluir">Excluir</string>
+
+    <string name="produto_form_erro_nome">Informe o nome do item</string>
+    <string name="produto_form_erro_preco">Informe um preço maior que zero</string>
+
+    <string name="produto_form_dialogo_titulo">Excluir item?</string>
+    <string name="produto_form_dialogo_mensagem">Esta ação não pode ser desfeita.</string>
+    <string name="produto_form_dialogo_cancelar">Cancelar</string>
+    <string name="produto_form_dialogo_confirmar">Excluir</string>
+
+    <string name="produto_form_msg_salvo">Item salvo</string>
+    <string name="produto_form_msg_excluido">Item excluído</string>
+    <string name="produto_form_msg_nao_encontrado">Item não encontrado</string>
+    <string name="produto_form_msg_erro_salvar">Não foi possível salvar o item</string>
+    <string name="produto_form_msg_erro_excluir">Não foi possível excluir o item</string>
+</resources>

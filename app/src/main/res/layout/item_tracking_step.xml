@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Uma etapa da linha do tempo: coluna (linha, bolinha, linha) + título + horário -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <!-- Coluna da esquerda: pedaço de linha acima, bolinha e pedaço de linha abaixo -->
+    <LinearLayout
+        android:layout_width="16dp"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/lineTop"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            tools:background="@color/ink" />
+
+        <View
+            android:id="@+id/dot"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/bg_tracking_dot" />
+
+        <View
+            android:id="@+id/lineBottom"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            tools:background="@color/ink" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.Courmet.Tracking.StepTitle"
+        tools:text="Pedido confirmado" />
+
+    <TextView
+        android:id="@+id/textTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:textAppearance="@style/TextAppearance.Courmet.Caption"
+        tools:text="12:47" />
+
+</LinearLayout>

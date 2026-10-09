@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- O design do Courmet só tem versão clara, então o tema não muda no modo escuro. -->
+    <style name="Base.Theme.Courmet" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/ink</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/gold</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/ink</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        <item name="colorOutline">@color/border</item>
+        <item name="colorError">@color/error</item>
+        <!-- Sobrescreve os tons lilás padrão do Material 3 (diálogos, menus, FAB...) -->
+        <item name="colorPrimaryContainer">@color/gold_soft</item>
+        <item name="colorOnPrimaryContainer">@color/ink</item>
+        <item name="colorSecondaryContainer">@color/gold_soft</item>
+        <item name="colorOnSecondaryContainer">@color/ink</item>
+        <item name="colorTertiary">@color/gold</item>
+        <item name="colorSurfaceVariant">@color/background</item>
+        <item name="colorSurfaceContainerLowest">@color/surface</item>
+        <item name="colorSurfaceContainerLow">@color/surface</item>
+        <item name="colorSurfaceContainer">@color/surface</item>
+        <item name="colorSurfaceContainerHigh">@color/surface</item>
+        <item name="colorSurfaceContainerHighest">@color/background</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:textColorPrimary">@color/ink</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <!-- Fonte padrão via textViewStyle: definir fontFamily direto no tema
+             sobrescreveria o textAppearance de todos os textos. -->
+        <item name="android:textViewStyle">@style/Widget.Courmet.TextView</item>
+        <item name="textInputStyle">@style/Widget.Courmet.TextInputLayout</item>
+    </style>
+
+    <style name="Theme.Courmet" parent="Base.Theme.Courmet" />
+</resources>

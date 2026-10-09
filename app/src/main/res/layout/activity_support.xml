@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    tools:context=".SupportActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="32dp">
+
+        <!-- Cabeçalho -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonBack"
+                style="@style/Widget.Courmet.Support.BackButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="@string/support_back" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:text="@string/support_title"
+                android:textAppearance="@style/TextAppearance.Courmet.ScreenTitle" />
+        </LinearLayout>
+
+        <!-- Busca -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:startIconContentDescription="@string/support_search_hint"
+            app:startIconDrawable="@drawable/ic_support_search"
+            app:startIconTint="@color/text_muted">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputSearch"
+                style="@style/Widget.Courmet.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/support_search_hint"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Perguntas frequentes -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="14dp"
+            android:text="@string/support_faq_title"
+            android:textAppearance="@style/TextAppearance.Courmet.SectionTitle" />
+
+        <!-- Os cartões são inflados em SupportActivity a partir de strings_support.xml -->
+        <LinearLayout
+            android:id="@+id/containerFaq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical" />
+
+        <!-- Fale conosco -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="14dp"
+            android:text="@string/support_contact_title"
+            android:textAppearance="@style/TextAppearance.Courmet.SectionTitle" />
+
+        <include
+            android:id="@+id/contactChat"
+            layout="@layout/item_support_contact" />
+
+        <include
+            android:id="@+id/contactEmail"
+            layout="@layout/item_support_contact" />
+
+        <include
+            android:id="@+id/contactPhone"
+            layout="@layout/item_support_contact" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

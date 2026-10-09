@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tela de detalhes do restaurante -->
+    <string name="restaurant_default_name">Omakase Sushi Bar</string>
+    <string name="restaurant_rating">5.0</string>
+    <string name="restaurant_rating_description">Avaliação 5.0 de 5</string>
+    <string name="restaurant_tags">Japonesa • Cozinha Autoral • Jardins</string>
+    <string name="restaurant_delivery_time">30-40 min</string>
+    <string name="restaurant_delivery_free">Entrega Grátis</string>
+    <string name="restaurant_hero_description">Chef preparando sushi no balcão</string>
+
+    <string name="restaurant_back">Voltar</string>
+    <string name="restaurant_favorite_add">Favoritar</string>
+    <string name="restaurant_favorite_remove">Remover dos favoritos</string>
+    <string name="restaurant_favorite_added">Adicionado aos favoritos</string>
+    <string name="restaurant_favorite_removed">Removido dos favoritos</string>
+    <string name="restaurant_share">Compartilhar</string>
+    <string name="restaurant_share_text">Conheça o %1$s no Courmet!</string>
+
+    <!-- Seções do cardápio -->
+    <string name="restaurant_section_starters">Entradas</string>
+    <string name="restaurant_section_mains">Pratos Principais</string>
+
+    <!-- Barra inferior: "Ver pedido • 2 itens • R$ 110,00" -->
+    <string name="restaurant_cart_button">Ver pedido • %1$s • %2$s</string>
+    <plurals name="restaurant_cart_items">
+        <item quantity="one">%d item</item>
+        <item quantity="other">%d itens</item>
+    </plurals>
+</resources>

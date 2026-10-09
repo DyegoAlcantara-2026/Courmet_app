@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cartões de navegação da Home: brancos, borda fina e cantos de 16dp -->
+    <style name="Widget.Courmet.Home.Card" parent="Widget.Material3.CardView.Outlined">
+        <item name="cardBackgroundColor">@color/surface</item>
+        <item name="strokeColor">@color/border</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="rippleColor">@color/gold_soft</item>
+    </style>
+
+    <!-- "Olá!" no canto do cabeçalho -->
+    <style name="TextAppearance.Courmet.Home.Greeting" parent="TextAppearance.Courmet.Body">
+        <item name="android:fontFamily">@font/manrope_medium</item>
+        <item name="fontFamily">@font/manrope_medium</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!-- Título de cada cartão (ex.: "Cardápio") -->
+    <style name="TextAppearance.Courmet.Home.CardTitle" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:fontFamily">@font/manrope_bold</item>
+        <item name="fontFamily">@font/manrope_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/ink</item>
+    </style>
+
+    <!-- Subtítulo de cada cartão -->
+    <style name="TextAppearance.Courmet.Home.CardSubtitle" parent="TextAppearance.Courmet.Caption">
+        <item name="android:textSize">13sp</item>
+    </style>
+</resources>

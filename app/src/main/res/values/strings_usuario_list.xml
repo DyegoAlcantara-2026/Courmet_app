@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="usuario_list_title">Usuários</string>
+    <string name="usuario_list_subtitle">Gerencie as contas cadastradas</string>
+    <string name="usuario_list_back">Voltar</string>
+    <string name="usuario_list_search_hint">Buscar por nome ou e-mail</string>
+    <string name="usuario_list_empty">Nenhum usuário cadastrado</string>
+    <string name="usuario_list_empty_hint">Toque em \"Novo usuário\" para adicionar o primeiro.</string>
+    <string name="usuario_list_no_results">Nenhum usuário encontrado</string>
+    <string name="usuario_list_no_results_hint">Tente buscar por outro nome ou e-mail.</string>
+    <string name="usuario_list_new">Novo usuário</string>
+
+    <!--
+        <plurals>: um texto para cada "quantidade". O Android escolhe sozinho a versão
+        certa pelo número: getResources().getQuantityString(R.plurals.usuario_list_count, n, n)
+        - "one"   -> 1 usuário
+        - "other" -> 0, 2, 3... usuários
+        (O %d é trocado pelo número, igual no String.format.)
+    -->
+    <plurals name="usuario_list_count">
+        <item quantity="one">%d usuário</item>
+        <item quantity="other">%d usuários</item>
+    </plurals>
+</resources>

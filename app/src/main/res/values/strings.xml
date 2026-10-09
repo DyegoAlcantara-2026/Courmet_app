@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Courmet</string>
+
+    <!-- Login -->
+    <string name="login_welcome">Bem-vindo de volta</string>
+    <string name="login_subtitle">Entre na sua conta para continuar</string>
+    <string name="login_email_label">E-mail</string>
+    <string name="login_email_hint">exemplo@courmet.com</string>
+    <string name="login_password_label">Senha</string>
+    <string name="login_password_hint">Digite sua senha</string>
+    <string name="login_forgot_password">Esqueceu sua senha?</string>
+    <string name="login_submit">Entrar</string>
+    <string name="login_or_continue">ou continue com</string>
+    <string name="login_google">Google</string>
+    <string name="login_apple">Apple</string>
+    <string name="login_no_account">Não tem uma conta?</string>
+    <string name="login_sign_up">Cadastre-se</string>
+    <string name="login_error_email">Informe um e-mail válido</string>
+    <string name="login_error_password">Informe sua senha</string>
+    <string name="login_error_credentials">E-mail ou senha incorretos</string>
+    <string name="not_implemented">Em breve</string>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tela de Acompanhamento do pedido -->
+    <string name="tracking_title">Acompanhamento</string>
+    <string name="tracking_back">Voltar</string>
+    <string name="tracking_map_description">Mapa com a rota do entregador até você</string>
+    <string name="tracking_eta_label">Tempo estimado de entrega</string>
+    <string name="tracking_eta_value">13:15 - 13:25</string>
+    <string name="tracking_delivered_label">Pedido entregue às</string>
+    <string name="tracking_delivered_value">13:19</string>
+    <string name="tracking_status_caption">Status do pedido</string>
+
+    <!-- Etapas da linha do tempo -->
+    <string name="tracking_step_confirmed">Pedido confirmado</string>
+    <string name="tracking_step_preparing">Preparando</string>
+    <string name="tracking_step_out_for_delivery">Saiu para entrega</string>
+    <string name="tracking_step_delivered">Entregue</string>
+    <string name="tracking_time_confirmed">12:47</string>
+    <string name="tracking_time_preparing">12:55</string>
+    <string name="tracking_time_out_for_delivery">13:02</string>
+    <string name="tracking_time_delivered">13:19</string>
+    <string name="tracking_in_transit">Em trânsito</string>
+    <string name="tracking_expected">Previsto 13:20</string>
+
+    <!-- Entregador -->
+    <string name="tracking_courier_name">Roberto Silva</string>
+    <string name="tracking_courier_subtitle">Seu entregador Courmet selecionado</string>
+    <string name="tracking_courier_photo">Foto do entregador</string>
+    <string name="tracking_chat">Conversar com o entregador</string>
+    <string name="tracking_coming_soon">Em breve</string>
+    <string name="tracking_delivered_toast">Pedido entregue. Bom apetite!</string>
+</resources>

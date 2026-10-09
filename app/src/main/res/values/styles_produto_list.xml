@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cartão branco com borda fina e cantos arredondados (um por produto) -->
+    <style name="Widget.Courmet.ProdutoList.Card" parent="Widget.Material3.CardView.Outlined">
+        <item name="cardBackgroundColor">@color/surface</item>
+        <item name="strokeColor">@color/border</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="rippleColor">@color/gold_soft</item>
+    </style>
+
+    <!-- Botão circular de voltar -->
+    <style name="Widget.Courmet.ProdutoList.BackButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="backgroundTint">@color/surface</item>
+        <item name="strokeColor">@color/border</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cornerRadius">20dp</item>
+        <item name="icon">@drawable/ic_produto_list_back</item>
+        <item name="iconTint">@color/ink</item>
+        <item name="iconSize">18dp</item>
+        <item name="iconPadding">0dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="rippleColor">@color/gold_soft</item>
+    </style>
+
+    <!-- Botão flutuante "Novo item": fundo preto, texto e ícone brancos -->
+    <style name="Widget.Courmet.ProdutoList.Fab" parent="Widget.Material3.ExtendedFloatingActionButton.Icon.Primary">
+        <item name="backgroundTint">@color/ink</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="iconTint">@color/white</item>
+        <item name="rippleColor">@color/text_secondary</item>
+        <item name="android:fontFamily">@font/manrope_bold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <!-- Nome do produto -->
+    <style name="TextAppearance.Courmet.ProdutoList.Name" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:fontFamily">@font/manrope_bold</item>
+        <item name="fontFamily">@font/manrope_bold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/ink</item>
+    </style>
+
+    <!-- Texto da etiqueta de categoria -->
+    <style name="TextAppearance.Courmet.ProdutoList.Badge" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:fontFamily">@font/manrope_semibold</item>
+        <item name="fontFamily">@font/manrope_semibold</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/gold</item>
+    </style>
+
+    <!-- Descrição (cinza, menor) -->
+    <style name="TextAppearance.Courmet.ProdutoList.Description" parent="TextAppearance.Courmet.Body">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/text_muted</item>
+    </style>
+
+    <!-- Preço -->
+    <style name="TextAppearance.Courmet.ProdutoList.Price" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:fontFamily">@font/manrope_bold</item>
+        <item name="fontFamily">@font/manrope_bold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/ink</item>
+    </style>
+</resources>

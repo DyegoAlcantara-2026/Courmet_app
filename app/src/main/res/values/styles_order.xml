@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Nome do restaurante -->
+    <style name="TextAppearance.Courmet.Order.RestaurantName" parent="TextAppearance.Courmet.Label">
+        <item name="android:fontFamily">@font/manrope_bold</item>
+        <item name="fontFamily">@font/manrope_bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Nome do item e valores principais -->
+    <style name="TextAppearance.Courmet.Order.ItemName" parent="TextAppearance.Courmet.Label">
+        <item name="android:fontFamily">@font/manrope_medium</item>
+        <item name="fontFamily">@font/manrope_medium</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.Courmet.Order.ItemPrice" parent="TextAppearance.Courmet.Label">
+        <item name="android:fontFamily">@font/manrope_semibold</item>
+        <item name="fontFamily">@font/manrope_semibold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- "1x" dentro do selo dourado -->
+    <style name="TextAppearance.Courmet.Order.Quantity" parent="TextAppearance.Courmet.Caption">
+        <item name="android:fontFamily">@font/manrope_semibold</item>
+        <item name="fontFamily">@font/manrope_semibold</item>
+        <item name="android:textColor">@color/gold</item>
+    </style>
+
+    <!-- "FORMA DE PAGAMENTO" -->
+    <style name="TextAppearance.Courmet.Order.Overline" parent="TextAppearance.Courmet.Caption">
+        <item name="android:fontFamily">@font/manrope_semibold</item>
+        <item name="fontFamily">@font/manrope_semibold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.04</item>
+    </style>
+
+    <!-- Linhas de subtotal / taxa -->
+    <style name="TextAppearance.Courmet.Order.SummaryLabel" parent="TextAppearance.Courmet.Body">
+        <item name="android:textColor">@color/text_muted</item>
+    </style>
+
+    <style name="TextAppearance.Courmet.Order.SummaryValue" parent="TextAppearance.Courmet.Body" />
+
+    <style name="TextAppearance.Courmet.Order.TotalLabel" parent="TextAppearance.Courmet.Label">
+        <item name="android:fontFamily">@font/manrope_bold</item>
+        <item name="fontFamily">@font/manrope_bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearance.Courmet.Order.TotalValue" parent="TextAppearance.Courmet.Order.TotalLabel">
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <!-- Divisor de largura total entre seções -->
+    <style name="Widget.Courmet.Order.Divider" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/border</item>
+    </style>
+
+</resources>

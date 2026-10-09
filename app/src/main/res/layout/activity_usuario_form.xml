@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tela de cadastro (criar conta) / edição de usuário. O NestedScrollView deixa rolar
+     o conteúdo quando o teclado aparece (o espaço do teclado vira padding, no código). -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    tools:context=".usuarios.UsuarioFormActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="24dp">
+
+        <!-- Cabeçalho: voltar + título ("Criar conta" ou "Editar usuário", definido no código) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonVoltar"
+                style="@style/Widget.Courmet.UsuarioForm.BackButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="@string/usuario_form_voltar" />
+
+            <TextView
+                android:id="@+id/textTitulo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.Courmet.ScreenTitle"
+                tools:text="@string/usuario_form_titulo_criar" />
+        </LinearLayout>
+
+        <!-- Subtítulo: só aparece no modo cadastro (visibilidade controlada no código) -->
+        <TextView
+            android:id="@+id/textSubtitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/usuario_form_subtitulo_criar"
+            android:textAppearance="@style/TextAppearance.Courmet.Body"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <!-- Nome (obrigatório) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:labelFor="@id/inputNome"
+            android:text="@string/usuario_form_nome_label"
+            android:textAppearance="@style/TextAppearance.Courmet.Label" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputNome"
+                style="@style/Widget.Courmet.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="name"
+                android:hint="@string/usuario_form_nome_hint"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName|textCapWords"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- E-mail (obrigatório e com formato válido) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:labelFor="@id/inputEmail"
+            android:text="@string/usuario_form_email_label"
+            android:textAppearance="@style/TextAppearance.Courmet.Label" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputEmail"
+                style="@style/Widget.Courmet.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="emailAddress"
+                android:hint="@string/usuario_form_email_hint"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Telefone (opcional): inputType phone abre o teclado numérico -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:labelFor="@id/inputTelefone"
+            android:text="@string/usuario_form_telefone_label"
+            android:textAppearance="@style/TextAppearance.Courmet.Label" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutTelefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputTelefone"
+                style="@style/Widget.Courmet.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="phone"
+                android:hint="@string/usuario_form_telefone_hint"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Senha: o ícone do olho (password_toggle) mostra/esconde o texto.
+             No modo edição o código adiciona um texto de ajuda embaixo do campo. -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:labelFor="@id/inputSenha"
+            android:text="@string/usuario_form_senha_label"
+            android:textAppearance="@style/TextAppearance.Courmet.Label" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputSenha"
+                style="@style/Widget.Courmet.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="newPassword"
+                android:hint="@string/usuario_form_senha_hint"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Confirmar senha: precisa ser igual à senha -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:labelFor="@id/inputConfirmarSenha"
+            android:text="@string/usuario_form_confirmar_label"
+            android:textAppearance="@style/TextAppearance.Courmet.Label" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutConfirmarSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputConfirmarSenha"
+                style="@style/Widget.Courmet.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="newPassword"
+                android:hint="@string/usuario_form_confirmar_hint"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Espaço flexível: empurra os botões para o rodapé em telas altas -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:minHeight="32dp" />
+
+        <!-- Texto do botão ("Criar conta" ou "Salvar") é definido no código -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSalvar"
+            style="@style/Widget.Courmet.Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="@string/usuario_form_criar" />
+
+        <!-- Só aparece no modo edição -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonExcluir"
+            style="@style/Widget.Courmet.UsuarioForm.Button.Delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/usuario_form_excluir"
+            android:visibility="gone" />
+
+        <!-- "Já tem uma conta? Entrar": só aparece no modo cadastro -->
+        <LinearLayout
+            android:id="@+id/grupoEntrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/usuario_form_ja_tem_conta"
+                android:textAppearance="@style/TextAppearance.Courmet.Body"
+                android:textColor="@color/text_muted" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonEntrar"
+                style="@style/Widget.Courmet.Button.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/usuario_form_entrar"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

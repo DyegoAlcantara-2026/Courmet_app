@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Textos da tela inicial (Home) -->
+    <string name="home_logo">Courmet</string>
+    <string name="home_greeting">Olá!</string>
+    <!-- %1$s = primeiro nome do usuário logado -->
+    <string name="home_greeting_name">Olá, %1$s</string>
+    <string name="home_address">Av. Paulista, 1000 • Jardins, SP</string>
+    <string name="home_section_for_you">Para Você</string>
+
+    <string name="home_menu_title">Cardápio</string>
+    <string name="home_menu_subtitle">Cadastre comidas e bebidas (CRUD)</string>
+    <string name="home_order_title">Meu pedido</string>
+    <string name="home_order_subtitle">Revise e finalize seu pedido</string>
+    <string name="home_support_title">Ajuda &amp; Suporte</string>
+    <string name="home_support_subtitle">Dúvidas frequentes e contato</string>
+
+    <string name="home_section_admin">Administração</string>
+    <string name="home_promotions_title">Promoções</string>
+    <string name="home_promotions_subtitle">Pratos prontos com até 40% OFF</string>
+    <string name="home_restaurant_title">Omakase Sushi Bar</string>
+    <string name="home_restaurant_subtitle">Japonesa • Cozinha Autoral • Jardins</string>
+    <string name="home_users_title">Usuários</string>
+    <string name="home_users_subtitle">Cadastre e edite contas (CRUD)</string>
+
+    <string name="home_logout">Sair</string>
+</resources>
